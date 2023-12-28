@@ -7,15 +7,15 @@ module.exports = {
     extend: {
       colors: {
         // LIGHT MODE
-        // primary: '#6677EB',
-        // secondary: '#4C66C2',
+        // primary: '#142699',
+        // secondary: '#3D57B3',
         // accent: '#5D7BEA',
         // background: '#E6E6E6',
         // text: '#050515',
 
         // DARK MODE
-        primary: '#142699',
-        secondary: '#3D57B3',
+        primary: '#6677EB',
+        secondary: '#4C66C2',
         accent: '#1534A2',
         background: '#1A1A1A',
         text: '#EAEAFA',

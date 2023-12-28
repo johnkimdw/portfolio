@@ -7,7 +7,7 @@ export default function Navbar() {
            <nav class="fixed w-full top-0 left-0">
                 <header className="bg-background/30 backdrop-blur-sm ">
                 {/* px-4 sm:px-6 lg:px-8 */}
-                    <div className="container mx-auto max-w-screen-xl">
+                    <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                         <div className="flex h-16 items-center justify-between">
                             {/* LOGO */}
                             <div className="flex md:flex md:items-center md:gap-12">
@@ -43,8 +43,6 @@ export default function Navbar() {
                     </div>
                 </header>
             </nav>
-
-
         </>
     );
 }
