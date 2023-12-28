@@ -6,7 +6,9 @@ function App() {
     <main>
       <div class="bg-background min-h-screen">
 
+        {/* NAVBAR */}
         <Navbar/>
+        {/* INTRO */}
         <Intro/>
 
       </div>
