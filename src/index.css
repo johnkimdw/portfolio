@@ -1,13 +1,12 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* @font-face {
+  font-family: "OSWALD";
+  src: url("../public/fonts/Oswald.ttf");
+  font-family: "MARCELLUS";
+  src: url("../public/fonts/Marcellus.ttf");
+  font-family: "DMSANS";
+  src: url("../public/fonts/DMSans.ttf")
+} */
