@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
 /* @font-face {
   font-family: "OSWALD";
   src: url("../public/fonts/Oswald.ttf");
