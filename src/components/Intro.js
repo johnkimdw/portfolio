@@ -7,7 +7,7 @@ export default function Intro() {
         <div class="w-screen max-w-full max-h-3xl pt-16">
             <div class="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                 {/* ABOUT SECTION */}
-                <div class="bg-primary px-20 py-20 mx-22 my-20 relative block overflow-hidden rounded-lg p-4 sm:p-6 lg:p-8">
+                <div class="bg-primary  mx-22 my-20 relative block overflow-hidden rounded-lg p-6 sm:p-14 lg:p-22">
 
                     {/* NAME INTRO */}
                     <div class="grid grid-cols-2 sm:justify-between sm:gap-4">

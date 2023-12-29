@@ -41,7 +41,36 @@ export default function Projects() {
                             </div>
                         </div>
                         
-                        <div>2</div>
+                        {/* PROJECT 2 */}
+                        <div className="relative w-full border border-red-500/0 cursor-pointer 
+                        ">
+                            {/* IMAGE */}
+                            <div class="relative w-full h-80 bg-gray-500/10 overflow-hidden border-2 border-gray-500/15  rounded p-4
+                            
+                            ">
+                                <img
+                                    alt="project 1"
+                                    src={proj1}
+                                    class=" h-full object-scale-down object-center
+                                    transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300 "
+                                />
+                            </div>
+                            
+
+                            <div className="bg-primary/0 p-4 sm:p-6">
+                                <p className="block text-xs text-gray-600">PRODUCT DESIGN | OBSERVABILITY | API | DASHBOARD</p>
+
+                                <a href="https://github.com/JohndKim/Pickup-Line-Generator">
+                                <h3 className="mt-0.5 text-lg text-text hover:text-primary">ML Pickup Line Generator & Classifier</h3>
+                                </a>
+
+                                <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-600">
+                                Recurrent neural network built in Python using TensorFlow and Keras to help with in-person and online dating.
+                                
+
+                                </p>
+                            </div>
+                        </div>
                         <div>3</div>
                         <div>4</div>
 
