@@ -25,15 +25,15 @@ export default function Navbar() {
                                 <nav aria-label="Global" class="md:block">
                                     <ul class="flex items-center gap-6 text-sm">
                                         <li>
-                                        <a class="text-text transition hover:text-gray-500/75" href="#projects"> PROJECTS </a>
+                                        <a class="text-text transition hover:text-secondary" href="#projects"> PROJECTS </a>
                                         </li>
 
                                         <li>
-                                        <a class="text-text transition hover:text-gray-500/75" href="#about"> ABOUT </a>
+                                        <a class="text-text transition hover:text-secondary" href="#about"> ABOUT </a>
                                         </li>
 
                                         <li>
-                                        <a class="text-text transition hover:text-gray-500/75" href="/"> RESUME </a>
+                                        <a class="text-text transition hover:text-secondary" href="/"> RESUME </a>
                                         </li>
                                     </ul>
                                 </nav>                                            

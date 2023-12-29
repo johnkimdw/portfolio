@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar"
 import Intro from "./components/Intro"
+import Projects from "./components/Projects"
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Navbar/>
         {/* INTRO */}
         <Intro/>
+        <Projects/>
 
       </div>
     </main>

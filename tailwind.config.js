@@ -19,6 +19,7 @@ module.exports = {
         // accent: '#1534A2',
         // background: '#1A1A1A',
         // text: '#EAEAFA',
+        textl: '#EAEAFA',
       },
 
       container: {
