@@ -4,7 +4,7 @@ export default function Navbar() {
     return (
         <>
             {/* NAVBAR */}
-           <nav class="fixed w-full top-0 left-0">
+           <nav class="fixed z-50 w-full top-0 left-0">
                 <header className="bg-background/30 backdrop-blur-sm ">
                 {/* px-4 sm:px-6 lg:px-8 */}
                     <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">

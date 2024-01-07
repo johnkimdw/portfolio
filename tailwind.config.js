@@ -7,11 +7,11 @@ module.exports = {
     extend: {
       colors: {
         // LIGHT MODE
-        primary: '#142699',
-        secondary: '#3D57B3',
-        accent: '#5D7BEA',
-        background: '#E6E6E6',
-        text: '#050515',
+        // primary: '#142699',
+        // secondary: '#3D57B3',
+        // accent: '#5D7BEA',
+        // background: '#E6E6E6',
+        // text: '#050515',
 
         // DARK MODE
         // primary: '#6677EB',
@@ -19,7 +19,20 @@ module.exports = {
         // accent: '#1534A2',
         // background: '#1A1A1A',
         // text: '#EAEAFA',
-        textl: '#EAEAFA',
+        textl: '#ffffff',
+
+        // GRAY MODE
+        primary: '#142699',
+        secondary: '#3D57B3',
+        accent: '#5D7BEA',
+        background: '#ffffff',
+        about: '#262626',
+        text: '#0000000',
+      },
+      fontFamily: {
+        sans: ["Lato", "sans-serif"],
+        garamond: ["Cormorant Garamond", "serif"],
+        gb: ["Gowun Batang", "serif"],
       },
 
       container: {
