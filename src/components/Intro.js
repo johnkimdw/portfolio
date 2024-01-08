@@ -20,7 +20,7 @@ export default function Intro() {
                             {/* <span class="animate-wave text-6xl">👋🏻</span> */}
 
                             <br/>
-                            <p className="mt-1 text-xl font-medium text-gray-600">I am a sophomore at the University of Notre Dame and a passionate, results-driven developer who strives to </p>
+                            <p className="mt-1 text-xl font-medium text-gray-600">I am a sophomore at the University of Notre Dame and a passionate, results-driven developer who strives to empower people through technology.</p>
                             <br/>
                             <p class="mt-1 text-xl font-medium text-black">Incoming SWE intern @ Humana</p>
                             

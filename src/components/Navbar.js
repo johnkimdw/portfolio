@@ -1,4 +1,4 @@
-import star from "../assets/img/star.svg"
+import star from "../assets/svg/star.svg"
 
 export default function Navbar() {
     return (
@@ -33,7 +33,7 @@ export default function Navbar() {
                                         </li>
 
                                         <li>
-                                        <a class="text-text transition hover:text-secondary" href="/"> RESUME </a>
+                                        <a class="text-text transition hover:text-secondary" href="https://docs.google.com/document/d/1dXNiWt0LyhGFOA0xO2VYf4OGeZdwGkR1/edit?usp=sharing&ouid=105997156362604829992&rtpof=true&sd=true"> RESUME </a>
                                         </li>
                                     </ul>
                                 </nav>                                            
