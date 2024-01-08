@@ -37,7 +37,7 @@ export default function Navbar() {
                             <div class="md:flex md:items-center md:gap-12">    
                                 <nav aria-label="Global" class="md:block">
                                     <ul class="flex items-center gap-6 text-sm">
-                                        <li>
+                                        <li class="text-text hover:text-secondary cursor-pointer">
                                         <Link
                                         class="text-text hover:text-secondary cursor-pointer"
                                             activeClass="active"
@@ -49,7 +49,7 @@ export default function Navbar() {
                                             {/* <a class="text-text transition hover:text-secondary" href="#projects"> PROJECTS </a> */}
                                         </li>
 
-                                        <li>
+                                        <li class="text-text hover:text-secondary cursor-pointer">
                                         <Link
                                             class="text-text hover:text-secondary cursor-pointer"
                                             activeClass="active"
