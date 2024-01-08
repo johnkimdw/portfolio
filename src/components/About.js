@@ -40,7 +40,7 @@ export default function About() {
                                     <br/>
                                     Grew in <span class="font-bold">Shanghai.</span>
                                     <br/>
-                                    Studying in <span class="font-bold">Seoul.</span>
+                                    Studying in <span class="font-bold">Notre Dame.</span>
                                 
                                     
                                 </div>
