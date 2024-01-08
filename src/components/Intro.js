@@ -7,10 +7,10 @@ export default function Intro() {
         <div class="w-screen max-w-full max-h-3xl pt-16">
             <div class="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                 {/* ABOUT SECTION */}
-                <div class="bg-background  mx-22 my-20 relative block overflow-hidden rounded-lg p-6 sm:p-14 lg:p-22 border border-black">
+                <div class="bg-background  mx-22 my-20 relative block overflow-hidden rounded-lg p-6 sm:p-14 lg:p-22 border border-black" id="intro">
 
                     {/* NAME INTRO */}
-                    <div class="grid grid-cols-2 sm:justify-between sm:gap-4">
+                    <div class="grid md:grid-cols-2 sm:justify-between sm:gap-4">
                         {/* COL 1 */}
                         <div>
                             <h1 class="text-4xl font-bold text-text">

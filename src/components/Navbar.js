@@ -1,3 +1,5 @@
+import { Link, animateScroll as scroll } from "react-scroll";
+
 import star from "../assets/svg/star.svg"
 
 export default function Navbar() {
@@ -13,9 +15,20 @@ export default function Navbar() {
                             <div className="flex md:flex md:items-center md:gap-12">
                                 <div className="block">
                                 
-                                    <a href="#">
+                                    <Link
+                                            class="text-text hover:text-secondary cursor-pointer"
+                                                activeClass="active"
+                                                to="intro"
+                                                spy={true}
+                                                smooth={true}
+                                                offset={-70}
+                                                duration={500}>
                                         <img alt="JK" src={star} style={{width: 50, height: 50, opacity: 1}}/>
-                                    </a>
+                                            
+                                    </Link>
+                                    {/* <a href="#">
+                                        
+                                    </a> */}
                                     
                                 </div>
                             </div>
@@ -25,15 +38,31 @@ export default function Navbar() {
                                 <nav aria-label="Global" class="md:block">
                                     <ul class="flex items-center gap-6 text-sm">
                                         <li>
-                                        <a class="text-text transition hover:text-secondary" href="#projects"> PROJECTS </a>
+                                        <Link
+                                        class="text-text hover:text-secondary cursor-pointer"
+                                            activeClass="active"
+                                            to="projects"
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-70}
+                                            duration={500}>PROJECTS</Link>
+                                            {/* <a class="text-text transition hover:text-secondary" href="#projects"> PROJECTS </a> */}
                                         </li>
 
                                         <li>
-                                        <a class="text-text transition hover:text-secondary" href="#about"> ABOUT </a>
+                                        <Link
+                                            class="text-text hover:text-secondary cursor-pointer"
+                                            activeClass="active"
+                                            to="about"
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-70}
+                                            duration={500}>ABOUT</Link>
+                                            {/* <a class="text-text transition hover:text-secondary" href="#about"> ABOUT </a> */}
                                         </li>
 
                                         <li>
-                                        <a class="text-text transition hover:text-secondary" href="https://docs.google.com/document/d/1dXNiWt0LyhGFOA0xO2VYf4OGeZdwGkR1/edit?usp=sharing&ouid=105997156362604829992&rtpof=true&sd=true"> RESUME </a>
+                                            <a class="text-text transition hover:text-secondary" href="https://docs.google.com/document/d/1dXNiWt0LyhGFOA0xO2VYf4OGeZdwGkR1/edit?usp=sharing&ouid=105997156362604829992&rtpof=true&sd=true"> RESUME </a>
                                         </li>
                                     </ul>
                                 </nav>                                            

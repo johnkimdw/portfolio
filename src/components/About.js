@@ -18,7 +18,7 @@ export default function About() {
                 {/* ABOUT ME SECTION */}
                 <div class="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 border border-background">
                     <div class="bg-about/0 p-10 mx-22 my-20 relative block overflow-hidden border rounded-lg border-black  ">
-                        <div class="grid grid-cols-2 sm:justify-between sm:gap-4 text-text">
+                        <div class="grid md:grid-cols-2 sm:justify-between sm:gap-4 text-text">
                             {/* PHOTO & NAME & SHORT DESC */}
                             <div class=" p-3 py-5 border border-background">
 
@@ -29,7 +29,7 @@ export default function About() {
                                         John Kim
                                         <span class="font-gb text-xl">        김동휘</span>
                                         <div class="mt-px"></div>
-                                        <span class="font-gb text-base font-normal">동휘: <span class="font-garamond text-xl">east star</span></span>
+                                        {/* <span class="font-gb text-base font-normal">동C휘: <span class="font-garamond text-xl">east star</span></span> */}
                                     </div>
                                     {/* <h1 class="font-garamond italic text-4xl">John Kim</h1> */}
 
@@ -59,7 +59,7 @@ export default function About() {
                                 <br/>
                                 <br/>
                                 
-                                In my free time, I like watching k-dramas and also dancing (recently dressed as Snow White for one of my dances...). Feel free to reach out to discuss anything related to tech, horror movies, and mahjong!
+                                In my free time, I like cooking and also dancing (recently dressed up as Snow White for one of my dances...). Feel free to reach out to discuss anything related to tech, food, and k-dramas!
                             
 
 

@@ -23,7 +23,7 @@ export default function Projects() {
                 {/* PROJECTS */}
                 <div class="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                     <div class=" mx-22 mt-20 mb-10 relative block overflow-hidden rounded-lg">
-                        <div class="grid grid-cols-2 grid-rows-2 sm:justify-between sm:gap-4">
+                        <div class="grid md:grid-cols-2 grid-rows-2 sm:justify-between sm:gap-4">
 
 
 
@@ -107,7 +107,7 @@ export default function Projects() {
                                 <div className="bg-primary/0 p-4 sm:p-6">
                                     <p className="block text-xs text-gray-600">REACTJS | DJANGO | API </p>
 
-                                    <a href="https://github.com/JohndKim/Pickup-Line-Generator">
+                                    <a href="https://github.com/JohndKim/Cookie-Run-Kingdom-AI-Battler">
                                     <h3 className="mt-0.5 text-lg text-text hover:text-primary">Cookie Run Kingdom Web Application</h3>
                                     </a>
 
@@ -138,7 +138,7 @@ export default function Projects() {
                                 <div className="bg-primary/0 p-4 sm:p-6">
                                     <p className="block text-xs text-gray-600">GUI | PYTHON | ALGORITHMS </p>
 
-                                    <a href="https://github.com/JohndKim/Pickup-Line-Generator">
+                                    <a href="https://github.com/JohndKim/Sudoku-Solver">
                                     <h3 className="mt-0.5 text-lg text-text hover:text-primary">Sudoku Solver</h3>
                                     </a>
 
