@@ -25,7 +25,7 @@ export default function Intro() {
                             <p class="mt-1 text-xl font-medium text-black">Incoming SWE intern @ Humana</p>
                             
                             <br/>
-                            <p className="mt-1 text-xl font-medium text-gray-600">Currently a research assistant at the Lucy Institute of Data and Society</p>
+                            <p className="mt-1 text-xl font-medium text-gray-600">Currently a research assistant at the Lucy Family Institute of Data and Society</p>
                         </div>
                         {/* COL 2 */}
                         <div class="overflow-visible">
