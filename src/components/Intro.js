@@ -15,7 +15,7 @@ export default function Intro() {
                         <div>
                             <h1 class="text-4xl font-bold text-text">
                                 Hi, I'm John&#160;&#160;
-                                <span class="animate-wave text-4xl">👋🏻</span>
+                                <span class="animate-wave text-4xl wave">👋🏻</span>
                             </h1>
                             {/* <span class="animate-wave text-6xl">👋🏻</span> */}
 
@@ -25,7 +25,8 @@ export default function Intro() {
                             <p class="mt-1 text-xl font-medium text-black">Incoming SWE intern @ Humana</p>
                             
                             <br/>
-                            <p className="mt-1 text-xl font-medium text-gray-600">Currently a research assistant at the Lucy Family Institute for Data and Society</p>
+
+                            <p className="mt-1 text-xl font-medium text-gray-600">Currently a <i>research assistant</i> at the Lucy Family Institute for Data and Society.</p>
                         </div>
                         {/* COL 2 */}
                         <div class="overflow-visible">
