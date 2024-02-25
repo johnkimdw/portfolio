@@ -1,7 +1,7 @@
 import { Link, animateScroll as scroll } from "react-scroll";
 
-// import star from "../assets/svg/star.svg"
-import star from "../assets/img/jkdw logo.png"
+import star from "../assets/svg/star.svg"
+// import star from "../assets/img/jkdw logo.png"
 
 export default function Navbar() {
     return (
@@ -24,7 +24,7 @@ export default function Navbar() {
                                                 smooth={true}
                                                 offset={-70}
                                                 duration={500}>
-                                        <img alt="JK" src="../assets/img/jkdw logo.png" style={{width: 50, height: 50, opacity: 1}}/>
+                                        <img alt="JK" src={star} style={{width: 50, height: 50, opacity: 1}}/>
                                             
                                     </Link>
                                     {/* <a href="#">
