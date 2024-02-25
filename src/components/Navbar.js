@@ -3,6 +3,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import star from "../assets/svg/star.svg"
 // import star from "../assets/img/jkdw logo.png"
 
+
 export default function Navbar() {
     return (
         <>
