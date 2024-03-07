@@ -38,7 +38,7 @@ export default function About() {
                                     <br/>
                                     Raised in <span class="font-bold">New Jersey.</span>
                                     <br/>
-                                    Brought in <span class="font-bold">Shanghai.</span>
+                                    Brought up in <span class="font-bold">Shanghai.</span>
                                     <br/>
                                     Studying in <span class="font-bold">Notre Dame.</span>
                                 
