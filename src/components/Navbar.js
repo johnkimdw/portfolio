@@ -1,6 +1,7 @@
 import { Link, animateScroll as scroll } from "react-scroll";
 
 import star from "../assets/svg/star.svg"
+import ball from "../assets/img/ball-logo.png"
 // import star from "../assets/img/jkdw logo.png"
 
 
@@ -14,7 +15,7 @@ export default function Navbar() {
                     <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                         <div className="flex h-16 items-center justify-between">
                             {/* LOGO */}
-                            <div className="flex md:flex md:items-center md:gap-12">
+                            <div className="flex md:flex md:items-center md:gap-12 cursor-pointer">
                                 <div className="block">
                                 
                                     <Link
@@ -25,7 +26,7 @@ export default function Navbar() {
                                                 smooth={true}
                                                 offset={-70}
                                                 duration={500}>
-                                        <img alt="JK" src={star} style={{width: 50, height: 50, opacity: 1}}/>
+                                        <img alt="JK" src={ball} style={{width: 50, height: 50, opacity: 1}}/>
                                             
                                     </Link>
                                     {/* <a href="#">
