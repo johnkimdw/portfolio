@@ -16,7 +16,7 @@ export default function About() {
 
 
                 {/* ABOUT ME SECTION */}
-                <div class="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 border ">
+                <div class="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                     <div class="bg-blue-100/30 p-10 mx-22 my-20 relative block overflow-hidden border rounded-lg border-primary  ">
                         <div class="grid md:grid-cols-2 sm:justify-between sm:gap-4 text-text">
                             {/* LEFT——PHOTO & NAME & SHORT DESC */}
