@@ -18,7 +18,7 @@ export default function Navbar() {
                                 <div className="block">
                                 
                                     <Link
-                                            class="text-text hover:text-secondary cursor-pointer"
+                                            class="text-primary hover:text-secondary cursor-pointer"
                                                 activeClass="active"
                                                 to="intro"
                                                 spy={true}
@@ -39,7 +39,7 @@ export default function Navbar() {
                             <div class="md:flex md:items-center md:gap-12">    
                                 <nav aria-label="Global" class="md:block">
                                     <ul class="flex items-center gap-6 text-sm">
-                                        <li class="text-blue hover:text-secondary cursor-pointer">
+                                        <li class="text-primary hover:text-secondary cursor-pointer">
                                         <Link
                                         class="text-primary  hover:text-blue-400 cursor-pointer"
                                             activeClass="active"
@@ -51,7 +51,7 @@ export default function Navbar() {
                                             {/* <a class="text-text transition hover:text-secondary" href="#projects"> PROJECTS </a> */}
                                         </li>
 
-                                        <li class="text-text hover:text-secondary cursor-pointer">
+                                        <li class="text-primary hover:text-secondary cursor-pointer">
                                         <Link
                                             class="text-primary  hover:text-blue-400 cursor-pointer"
                                             activeClass="active"
