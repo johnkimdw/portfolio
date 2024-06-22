@@ -22,7 +22,7 @@ export default function Intro() {
                             <br/>
                             <p className="mt-1 text-xl font-medium text-gray-600">I am a junior at the University of Notre Dame and a passionate, results-driven developer who strives to empower people through technology.</p>
                             <br/>
-                            <p class="mt-1 text-xl font-medium text-primary">Data analytics intern @ Humana</p>
+                            <p class="mt-1 text-xl font-medium text-primary">Data analyst intern @ Humana</p>
                             
                             <br/>
                             <p className="mt-1 text-xl font-medium text-gray-600">Currently a <span className="text-primary">research assistant</span> at the Lucy Family Institute for Data and Society.</p>
