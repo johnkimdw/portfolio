@@ -1,7 +1,8 @@
 import proj1 from "../assets/img/proj1.png"
 import proj2 from "../assets/img/proj2.png"
 import proj3 from "../assets/img/proj3.png"
-import proj4 from "../assets/img/proj4.png"
+import graph from "../assets/img/accuracy-graph.png"
+
 import proj5 from "../assets/img/proj5.png"
 
 import Card from "./props/Card"
@@ -57,7 +58,7 @@ export default function Projects() {
                             {/* PROJECT 1 */}
                             {/* ML */}
                             <Card
-                                imgsrc={proj1}
+                                imgsrc={graph}
                                 tags=" ML | Neural Networks | LLM "
                                 title="ML Pickup Line Generator & Classifier"
                                 link="https://github.com/JohndKim/Pickup-Line-Generator"
