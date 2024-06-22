@@ -4,7 +4,7 @@ export default function Projects(props) {
     return (
         <>
 
-            <div className="relative w-full border border-red-500/0 cursor-pointer 
+            <div className="relative w-full border border-red-500/0
             ">
                 
                 {/* IMAGE */}
@@ -20,7 +20,7 @@ export default function Projects(props) {
                     <p className="block text-xs text-gray-600"> {props.tags} </p>
 
                     <a href={props.link}>
-                    <h3 className="mt-0.5 text-lg text-blue-600 hover:text-primary">{props.title}</h3>
+                    <h3 className="mt-0.5 text-lg text-blue-600 hover:text-primary cursor-pointer ">{props.title}</h3>
                     </a>
 
                     <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-600">
