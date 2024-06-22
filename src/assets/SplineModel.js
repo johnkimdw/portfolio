@@ -12,11 +12,11 @@ import React, { Suspense } from 'react';
 
 const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
-export default function App() {
+export default function Star() {
   return (
-    <div>
+    <div class="">
       <Suspense fallback={<div>Loading...</div>}>
-      <Spline scene="https://prod.spline.design/4ZlX7NnsGFgaCh3K/scene.splinecode" />
+      <Spline class="!w-0" scene="https://prod.spline.design/4ZlX7NnsGFgaCh3K/scene.splinecode" />
       </Suspense>
     </div>
   );
