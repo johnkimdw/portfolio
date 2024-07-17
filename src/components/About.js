@@ -86,6 +86,7 @@ export default function About() {
                                     {/* ACHIEVEMENTS */}
                                     <div class="relative tracking-normal leading-4">
                                         <div class="mt-5 font-bold">Achievements</div>
+                                        <span class="block bg-black/10 p-2.5 rounded-md my-2">2024 - 1st Place ND-IBM Tech Ethics Hackathon</span>
                                         <span class="block bg-black/10 p-2.5 rounded-md my-2">2024 - iTREDs Scholar</span>
                                         <span class="block bg-black/10 p-2.5 rounded-md my-2">2022 - Sorin Scholar</span>
                                         <span class="block bg-black/10 p-2.5 rounded-md mb-2">202X - Deans List &#160;x3</span>
