@@ -1,4 +1,4 @@
-portfolio website
+portfolio website.
 
 Tech Stack:
 - ReactJS + Javascript
