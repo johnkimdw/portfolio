@@ -39,7 +39,7 @@ export default function Projects() {
                                 imgsrc={proj5}
                                 tags=" ALGORITHMS | COMPUTATION THEORY | AUTOMATA THEORY | DATASTRUCTURES  "
                                 title="Unix Grep & Sed"
-                                link="https://github.com/JohndKim/"
+                                link="https://github.com/johnkimdw/"
                                 description="Built a regex matcher in python with a modified Dijkstra's algorithm, parsing regex to regular operations to NFAs. Constructed the Unix sed command by creating a tree of operators, operands, and groups. 
 "
                             />
@@ -61,7 +61,7 @@ export default function Projects() {
                                 imgsrc={graph}
                                 tags=" ML | Neural Networks | LLM "
                                 title="ML Pickup Line Generator & Classifier"
-                                link="https://github.com/JohndKim/Pickup-Line-Generator"
+                                link="https://github.com/johnkimdw/Pickup-Line-Generator"
                                 description="Recurrent neural network built in Python using TensorFlow and Keras to help with in-person and online dating."
                             />
                             
@@ -72,7 +72,7 @@ export default function Projects() {
                                 imgsrc={proj3}
                                 tags=" REACTJS | DJANGO | API "
                                 title="Cookie Run Kingdom Web Application"
-                                link="https://github.com/JohndKim/Cookie-Run-Kingdom-AI-Battler"
+                                link="https://github.com/johnkimdw/Cookie-Run-Kingdom-AI-Battler"
                                 description="Webapp that stores cookies stats, descriptions, and more to predict arena game outcomes."
                             />
 
@@ -84,7 +84,7 @@ export default function Projects() {
                                 imgsrc={proj4}
                                 tags=" GUI | PYTHON | ALGORITHMS "
                                 title="Sudoku Solver"
-                                link="https://github.com/JohndKim/Sudoku-Solver"
+                                link="https://github.com/johnkimdw/Sudoku-Solver"
                                 description="Solves sudoku puzzles through a backtracking algorithm and visualizes the process."
                             /> */}
 
