@@ -49,7 +49,7 @@ export default function Footer() {
                             {/* GITHUB */}
                             <li>
                                 <a
-                                    href="https://github.com/JohndKim"
+                                    href="https://github.com/johnkimdw"
                                     rel="noreferrer"
                                     target="_blank"
                                     className="text-gray-700 transition hover:opacity-75"
