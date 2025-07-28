@@ -1,24 +1,26 @@
-import Navbar from "./components/Navbar"
-import Intro from "./components/Intro"
-import Projects from "./components/Projects"
-import About from "./components/About"
-import Footer from "./components/Footer"
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './contexts/ThemeContext';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import Cooking from './pages/Cooking';
 
 function App() {
   return (
-    <main>
-      <div class="bg-background min-h-screen">
-
-        {/* NAVBAR */}
-        <Navbar/>
-        {/* INTRO */}
-        <Intro/>
-        <Projects/>
-        <About/>
-        <Footer/>
-
-      </div>
-    </main>
+    <ThemeProvider>
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/cooking" element={<Cooking />} />
+          </Routes>
+        </Layout>
+      </Router>
+    </ThemeProvider>
   );
 }
 

@@ -3,36 +3,36 @@ module.exports = {
   content: [
     "./src/**/*.{js, jsx, ts, tsx}"
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        // LIGHT MODE
-        // primary: '#142699',
-        // secondary: '#3D57B3',
-        // accent: '#5D7BEA',
-        // background: '#E6E6E6',
-        // text: '#050515',
-
-        // DARK MODE
-        // primary: '#6677EB',
-        // secondary: '#4C66C2',
-        // accent: '#1534A2',
-        // background: '#1A1A1A',
-        // text: '#EAEAFA',
-        textl: '#ffffff',
-
-        // GRAY MODE
-        primary: '#142699',
-        secondary: '#3D57B3',
-        accent: '#5D7BEA',
-        background: '#ffffff',
-        about: '#262626',
-        text: '#0000000',
+        // Dark Theme (Space Blue)
+        dark: {
+          bg: '#000814',
+          text: '#e0f2fe',
+          'text-secondary': '#bae6fd',
+          link: '#38bdf8',
+          'link-hover': '#0ea5e9',
+          accent: '#7dd3fc',
+          border: '#1e40af',
+        },
+        // Light Theme (Sky Blue)
+        light: {
+          bg: '#f0f9ff',
+          text: '#0c4a6e',
+          'text-secondary': '#075985',
+          link: '#0284c7',
+          'link-hover': '#0369a1',
+          accent: '#0ea5e9',
+          border: '#93c5fd',
+        }
       },
       fontFamily: {
-        sans: ["Lato", "sans-serif"],
-        garamond: ["Cormorant Garamond", "serif"],
-        gb: ["Gowun Batang", "serif"],
+        sans: ["JetBrains Mono", "monospace"],
+        mono: ["Space Mono", "monospace"],
+        'space': ["Space Mono", "monospace"],
+        'jetbrains': ["JetBrains Mono", "monospace"],
       },
 
       container: {
