@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <div className="space-y-4 py-8">
-      {/* Header Section - Name and Photo like zen's */}
+      {/* Header Section */}
       <section className="flex items-center space-x-6 pb-8">
         <div className="w-20 h-20 flex-shrink-0">
           <img 
@@ -59,7 +59,7 @@ export default function Home() {
             </button>
           </div>
           
-          {/* External Links - zen's style */}
+          {/* External Links */}
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-sm font-sans">
             {[
               { name: 'git', url: 'https://github.com/johnkimdw' },
@@ -112,7 +112,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Research Section - zen's style */}
+      {/* Research Section */}
       <section>
         <h2 className="text-lg font-medium 4 font-space" style={{ color: colors.text }}>
           Selected works
@@ -169,7 +169,7 @@ export default function Home() {
                 </a>
               </div>
               <p className="text-xs font-san italic underline" style={{ color: colors.textMuted }}>
-                Main open-source contributor for RL optimizations, Arbor
+                Open-source contributor for RL optimizations, Arbor
               </p>
               <p className="text-xs leading-relaxed font-sans" style={{ color: colors.textMuted }}>
                 Built NVIDIA-GPU monitoring tools for training, and support for single GPU use for vLLM for reinforcement learning. 
