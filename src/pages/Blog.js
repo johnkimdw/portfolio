@@ -6,7 +6,9 @@ import blogPosts from '../data/blogPosts';
 export default function Blog() {
   const { colors } = useTheme();
   
-  const publishedPosts = blogPosts.filter(post => post.published);
+  const publishedPosts = blogPosts
+    .filter(post => post.published)
+    .sort((a, b) => new Date(b.time_date) - new Date(a.time_date));
 
   return (
     <div className="py-8">

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTheme } from '../../contexts/ThemeContext';
 
 export default function MobileComments({ comments = [] }) {
   const { colors } = useTheme();
+  const [hoveredComment, setHoveredComment] = useState(null);
 
   if (!comments.length) return null;
 
@@ -14,8 +15,14 @@ export default function MobileComments({ comments = [] }) {
       {comments.map((comment) => (
         <div 
           key={comment.id}
-          className="pl-6 border-l-2 py-2"
-          style={{ borderColor: colors.border }}
+          className={`pl-6 border-l-2 py-2 ${comment.clickable ? 'cursor-pointer' : 'cursor-default'}`}
+          style={{ 
+            borderColor: colors.border,
+            textDecoration: (comment.clickable && hoveredComment === comment.id) ? 'underline' : 'none'
+          }}
+          onMouseEnter={() => setHoveredComment(comment.id)}
+          onMouseLeave={() => setHoveredComment(null)}
+          onClick={() => comment.clickable && comment.link && window.open(comment.link, '_blank', 'noopener,noreferrer')}
         >
           <div className="text-sm leading-relaxed font-sans" style={{ color: colors.textMuted }}>
             <span 
@@ -24,24 +31,7 @@ export default function MobileComments({ comments = [] }) {
             >
               {comment.id}.
             </span>
-            {comment.clickable && comment.link ? (
-              <span>
-                {comment.content.split(' ').slice(0, -1).join(' ')}{' '}
-                <a
-                  href={comment.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:no-underline transition-all duration-200"
-                  style={{ color: colors.link }}
-                  onMouseEnter={(e) => e.target.style.color = colors.linkHover}
-                  onMouseLeave={(e) => e.target.style.color = colors.link}
-                >
-                  {comment.content.split(' ').slice(-1)[0]}
-                </a>
-              </span>
-            ) : (
-              comment.content
-            )}
+            {comment.content}
           </div>
         </div>
       ))}

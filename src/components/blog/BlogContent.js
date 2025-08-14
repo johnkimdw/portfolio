@@ -79,10 +79,26 @@ export default function BlogContent({ content, sideComments = [], onRefHover, on
       });
     };
 
+    // Set up image load listeners to recalculate positions
+    const setupImageListeners = () => {
+      const images = document.querySelectorAll('.markdown-content img');
+      images.forEach(img => {
+        if (img.complete) {
+          // Image already loaded
+          calculatePositions();
+        } else {
+          // Wait for image to load
+          img.addEventListener('load', calculatePositions);
+          img.addEventListener('error', calculatePositions); // In case image fails
+        }
+      });
+    };
+
     // Calculate positions and setup handlers after render
     const timer = setTimeout(() => {
       calculatePositions();
       setupRefHandlers();
+      setupImageListeners();
     }, 100);
     
     // Recalculate on window resize
@@ -91,6 +107,12 @@ export default function BlogContent({ content, sideComments = [], onRefHover, on
     return () => {
       clearTimeout(timer);
       window.removeEventListener('resize', calculatePositions);
+      // Clean up image event listeners
+      const images = document.querySelectorAll('.markdown-content img');
+      images.forEach(img => {
+        img.removeEventListener('load', calculatePositions);
+        img.removeEventListener('error', calculatePositions);
+      });
     };
   }, [content, onRefPositions, onRefHover]);
 
@@ -107,7 +129,7 @@ export default function BlogContent({ content, sideComments = [], onRefHover, on
     >
       <style>
         {`
-          .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+          .markdown-content h1, .markdown-content h2, .markdown-content h3, .markdown-content h4 {
             color: ${colors.text};
             font-family: 'Space Mono', monospace;
             font-weight: 500;
@@ -116,6 +138,7 @@ export default function BlogContent({ content, sideComments = [], onRefHover, on
           .markdown-content h1 { font-size: 1.5rem; }
           .markdown-content h2 { font-size: 1.25rem; }
           .markdown-content h3 { font-size: 1.125rem; }
+          .markdown-content h4 { font-size: 1rem; margin-bottom: 0.6rem; }
           
           .markdown-content p {
             color: ${colors.textSecondary};
@@ -126,7 +149,8 @@ export default function BlogContent({ content, sideComments = [], onRefHover, on
           }
           
           .markdown-content ul {
-            margin-bottom: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 1.0rem;
             padding-left: 1.5rem;
             list-style: none;
           }
@@ -136,7 +160,7 @@ export default function BlogContent({ content, sideComments = [], onRefHover, on
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.875rem;
             line-height: 1.625;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             position: relative;
           }
           
@@ -179,6 +203,48 @@ export default function BlogContent({ content, sideComments = [], onRefHover, on
             color: ${colors.textMuted};
             text-decoration: line-through;
             opacity: 0.7;
+          }
+          
+          .markdown-content blockquote {
+            border-left: 3px solid ${colors.accent};
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+            padding-right: 1rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            background-color: ${colors.accent}10;
+            border-radius: 0 4px 4px 0;
+          }
+          
+          .markdown-content blockquote p {
+            margin-bottom: 0.75rem;
+            font-style: italic;
+          }
+          
+          .markdown-content blockquote p:last-child {
+            margin-bottom: 0;
+          }
+          
+          .markdown-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            display: block;
+            box-shadow: 0 4px 12px ${colors.text}15;
+          }
+          
+          .markdown-content figure {
+            margin: 1.5rem 0;
+            text-align: center;
+          }
+          
+          .markdown-content figcaption {
+            color: ${colors.textMuted};
+            font-size: 0.75rem;
+            font-style: italic;
+            margin-top: 0.5rem;
+            text-align: center;
           }
         `}
       </style>

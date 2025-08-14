@@ -172,8 +172,7 @@ export default function Home() {
                 Main open-source contributor for RL optimizations, Arbor
               </p>
               <p className="text-xs leading-relaxed font-sans" style={{ color: colors.textMuted }}>
-                Built NVIDIA-GPU monitoring tools for training, and support for single GPU use for vLLM for reinforcement learning. 
-                Added CLI/Python module for config management, API startup, example scripts, and JQlang query logging for debug.
+                Built NVIDIA-GPU monitoring tools for training, JQlang query logging for debug, and used vLLM for reinforcement learning. Added CLI/Python module for config management, API startup, and example scripts.
               </p>
             </div>
           </div>
