@@ -158,11 +158,11 @@ And two types of memory creation:
 - Store memory in between conversations
 - Lower latency, but memory may not be available (cross-session)
 
-These types of memory are pretty easy to add to your agent with LangGraph. For hot path, adding create/update/search memory tools let the agent manage memory. By using a mix of these memory types, each with their own storage method, we can add memory to our agent. This will an agent to remember facts about the user, how to do certain skills, and evolve with usage. 
+These types of memory are pretty easy to add to your agent with LangGraph. For hot path, adding create/update/search memory tools let the agent manage memory. By using a mix of these memory types, each with their own storage method, we can add memory to our agent. This will create an agent to remember facts about the user, how to do certain skills, and evolve with usage. 
 
 ### Human-in-the-loop
 
-So this agent can use tools, remember me, and answer my questions! But what if it harms me? Like deleting my entire computer...
+So this agent can use tools, remember me, and answer my questions! But what if it harms me? Like dropping my database...
 
 When you want to restrict or monitor your agent's actions, use human-in-the-loop (add human oversight). Whenever it acts, you can restrict it to ask the user to approve, deny, or edit what it is doing. This is especially useful for tool calling, where it might be deleting resources or calling a tool wrong.
 
