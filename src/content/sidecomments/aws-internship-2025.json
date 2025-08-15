@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "content": "Omar wrote a good blog on this (click here)!",
+    "position": "ref:1",
+    "clickable": true,
+    "link": "https://github.com/okhat/blog/blob/main/2024.09.impact.md#1-invest-in-projects-not-papers"
+  },
+  {
+    "id": 2,
+    "content": "you learn to better articulate problems, design systems, work with customers, understand why you're doing things the way you are, and learn + move fast while the industry keeps pushing forward.",
+    "position": "ref:2",
+    "clickable": false
+  }
+]

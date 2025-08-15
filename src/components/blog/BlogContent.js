@@ -1,11 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { marked } from 'marked';
 import { useTheme } from '../../contexts/ThemeContext';
 
 export default function BlogContent({ content, sideComments = [], onRefHover, onRefPositions }) {
   const { colors } = useTheme();
   const [hoveredRef, setHoveredRef] = useState(null);
-  const refElements = useRef({});
 
   const renderContentWithRefs = (content) => {
     if (!content) return null;

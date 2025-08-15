@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
-import blogPosts from '../data/blogPosts';
+import { getAllPosts } from '../lib/blog';
 
 export default function Blog() {
   const { colors } = useTheme();
+  const [posts, setPosts] = useState([]);
   
-  const publishedPosts = blogPosts
-    .filter(post => post.published)
-    .sort((a, b) => new Date(b.time_date) - new Date(a.time_date));
+  useEffect(() => {
+    const loadPosts = () => {
+      const allPosts = getAllPosts();
+      const publishedPosts = allPosts.filter(post => post.published);
+      setPosts(publishedPosts);
+    };
+    
+    loadPosts();
+  }, []);
+  
+  const publishedPosts = posts;
 
   return (
     <div className="py-8">

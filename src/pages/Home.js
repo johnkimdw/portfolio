@@ -103,7 +103,7 @@ export default function Home() {
             .
           </p>
           <p className="text-sm leading-relaxed font-sans" style={{ color: colors.textMuted }}>
-            currently, i am an ai/ml sde intern at <strong>AWS</strong> SageMaker Unifed Studio where i built, deployed, and scaled AI agents. i worked end-to-end, including infrastructure (IaC), to agentic workflows with memory/hitl, and MCP/A2A integrations.
+            previously, i was an ai/ml sde intern at <strong>AWS</strong> SageMaker Unifed Studio where i built, deployed, and scaled AI agents. i worked end-to-end, including infrastructure (IaC), to agentic workflows with memory/hitl, and MCP/A2A integrations.
           </p>
           {/* <p className="text-base leading-relaxed font-sans" style={{ color: colors.textMuted }}>
             In my free time, I like cooking and dancing. Feel free to reach out to discuss 
