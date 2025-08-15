@@ -4,6 +4,7 @@ import { useTheme } from '../../contexts/ThemeContext';
 export default function SideComments({ comments = [], hoveredRef = null, refPositions = {} }) {
   const { colors } = useTheme();
   const [expandedComment, setExpandedComment] = useState(null);
+  const [hoveredComment, setHoveredComment] = useState(null);
 
   if (!comments.length) return null;
 
@@ -56,15 +57,23 @@ export default function SideComments({ comments = [], hoveredRef = null, refPosi
         return (
           <div 
             key={comment.id}
-            className="absolute text-xs leading-relaxed transition-all duration-200 cursor-pointer rounded p-2"
+            className={`absolute text-xs leading-relaxed transition-all duration-200 rounded p-2 ${comment.clickable ? 'cursor-pointer' : 'cursor-default'}`}
             style={{ 
               top: position.top,
               color: colors.textMuted,
               backgroundColor: hoveredRef === comment.id ? colors.link + '20' : 'transparent',
-              width: '100%'
+              width: '100%',
+              textDecoration: (comment.clickable && hoveredComment === comment.id) ? 'underline' : 'none'
             }}
-            onMouseEnter={() => setExpandedComment(comment.id)}
-            onMouseLeave={() => setExpandedComment(null)}
+            onMouseEnter={() => {
+              setExpandedComment(comment.id);
+              setHoveredComment(comment.id);
+            }}
+            onMouseLeave={() => {
+              setExpandedComment(null);
+              setHoveredComment(null);
+            }}
+            onClick={() => comment.clickable && comment.link && window.open(comment.link, '_blank', 'noopener,noreferrer')}
           >
             <div className="flex items-start space-x-2">
               <span 
@@ -74,34 +83,17 @@ export default function SideComments({ comments = [], hoveredRef = null, refPosi
                 {comment.id}.
               </span>
               <div className="font-sans relative">
-                {comment.clickable && comment.link ? (
-                  <span>
-                    {displayContent.split(' ').slice(0, -1).join(' ')}{' '}
-                    <a
-                      href={comment.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline hover:no-underline transition-all duration-200"
-                      style={{ color: colors.link }}
-                      onMouseEnter={(e) => e.target.style.color = colors.linkHover}
-                      onMouseLeave={(e) => e.target.style.color = colors.link}
-                    >
-                      {displayContent.split(' ').slice(-1)[0]}
-                    </a>
-                  </span>
-                ) : (
-                  <span>
-                    {displayContent}
-                    {isLong && !isExpanded && (
-                      <div 
-                        className="absolute bottom-0 left-0 right-0 h-4 pointer-events-none"
-                        style={{
-                          background: `linear-gradient(transparent, ${colors.bg})`
-                        }}
-                      />
-                    )}
-                  </span>
-                )}
+                <span>
+                  {displayContent}
+                  {isLong && !isExpanded && (
+                    <div 
+                      className="absolute bottom-0 left-0 right-0 h-4 pointer-events-none"
+                      style={{
+                        background: `linear-gradient(transparent, ${colors.bg})`
+                      }}
+                    />
+                  )}
+                </span>
               </div>
             </div>
           </div>

@@ -1,18 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
 import BlogContent from '../components/blog/BlogContent';
 import SideComments from '../components/blog/SideComments';
 import MobileComments from '../components/blog/MobileComments';
-import blogPosts from '../data/blogPosts';
+import { getPostBySlug } from '../lib/blog';
 
 export default function BlogPost() {
   const { slug } = useParams();
   const { colors } = useTheme();
   const [hoveredRef, setHoveredRef] = useState(null);
   const [refPositions, setRefPositions] = useState({});
+  const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
   
-  const post = blogPosts.find(p => p.slug === slug);
+  useEffect(() => {
+    const loadPost = async () => {
+      try {
+        const postData = await getPostBySlug(slug);
+        setPost(postData);
+      } catch (error) {
+        console.error('Error loading post:', error);
+        setPost(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    if (slug) {
+      loadPost();
+    }
+  }, [slug]);
+  
+  if (loading) {
+    return (
+      <div className="py-16 text-center">
+        <p style={{ color: colors.textMuted }}>Loading...</p>
+      </div>
+    );
+  }
   
   if (!post) {
     return (

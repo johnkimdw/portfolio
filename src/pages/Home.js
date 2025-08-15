@@ -103,7 +103,7 @@ export default function Home() {
             .
           </p>
           <p className="text-sm leading-relaxed font-sans" style={{ color: colors.textMuted }}>
-            currently, i am an ai/ml sde intern at <strong>AWS</strong> SageMaker Unifed Studio where i built, deployed, and scaled AI agents. i worked end-to-end, including infrastructure (IaC), to agentic workflows with memory/hitl, and MCP/A2A integrations.
+            previously, i was an ai/ml sde intern at <strong>AWS</strong> SageMaker Unifed Studio where i built, deployed, and scaled AI agents. i worked end-to-end, including infrastructure (IaC), to agentic workflows with memory/hitl, and MCP/A2A integrations.
           </p>
           {/* <p className="text-base leading-relaxed font-sans" style={{ color: colors.textMuted }}>
             In my free time, I like cooking and dancing. Feel free to reach out to discuss 
@@ -172,8 +172,7 @@ export default function Home() {
                 Open-source contributor for RL optimizations, Arbor
               </p>
               <p className="text-xs leading-relaxed font-sans" style={{ color: colors.textMuted }}>
-                Built NVIDIA-GPU monitoring tools for training, and support for single GPU use for vLLM for reinforcement learning. 
-                Added CLI/Python module for config management, API startup, example scripts, and JQlang query logging for debug.
+                Built NVIDIA-GPU monitoring tools for training, JQlang query logging for debug, and used vLLM for reinforcement learning. Added CLI/Python module for config management, API startup, and example scripts.
               </p>
             </div>
           </div>
