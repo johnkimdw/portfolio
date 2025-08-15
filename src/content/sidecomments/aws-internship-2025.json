@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "content": "Omar wrote a good blog on this (click here)!",
+    "content": "Omar Khattab wrote a good blog on this (click here)!",
     "position": "ref:1",
     "clickable": true,
     "link": "https://github.com/okhat/blog/blob/main/2024.09.impact.md#1-invest-in-projects-not-papers"
