@@ -15,7 +15,7 @@ export const content = `## Introduction
 
 <img src="${day1AWS}" alt="AWS Day 1" style="width: 100%; max-width: 600px; height: 300px; object-fit: cover; object-position: center;" />
 
-This summer, I was an AI/ML SDE intern at AWS on the SageMaker Unified Studio (prev. DataZone) team. This was 12 weeks, ~$10k per month, with ~$7k housing stipend in the bay area. I was referred to the role, but I also applied to around 200 internships. I received an offer from Capital One, and received interviews with Robinhood (final), Belvedere Trading (didn't do), and PWC (didn't do).
+This summer, I was an AI/ML SDE intern at AWS on the SageMaker Unified Studio (prev. DataZone) team. This was 12 weeks, ~$10k per month, with ~$7k housing stipend in the bay area. I was referred to the role, but I also applied to around 200 internships. I received an offer from Capital One, and received interviews with Robinhood (final), Belvedere Trading (didn't do), and PwC (didn't do).
 
 I'll talk about what it's like to work at AWS, my role/team, my project, agentic concepts, stuff I did outside of work, and my final thoughts :)
 
