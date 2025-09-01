@@ -151,11 +151,11 @@ export default function Home() {
         <div className="w-full">
           <GitHubCalendar 
             username="johnkimdw"
-            theme={{
-              light: [colors.bg, '#e2e8f0', '#cbd5e1', colors.link, colors.linkHover],
-              dark: [colors.bg, '#374151', '#6b7280', colors.link, colors.linkHover]
-            }}
-            colorScheme={isDark ? 'dark' : 'light'}
+            blockRadius={20}
+            // theme={{
+            //   light: ['#f1f5f9', '#dbeafe', '#93c5fd', '#3b82f6', '#1e40af'],
+            //   dark: ['#0f172a', '#1e3a8a', '#3b82f6', '#60a5fa', '#93c5fd']
+            // }}
             style={{
               color: colors.textMuted
             }}
