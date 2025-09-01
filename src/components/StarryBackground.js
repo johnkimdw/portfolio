@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 
 export default function StarryBackground() {
-  const { colors } = useTheme();
+  const { colors, isDark } = useTheme();
   const canvasRef = useRef(null);
   const animationRef = useRef(null);
   const starsRef = useRef([]);
@@ -42,30 +42,33 @@ export default function StarryBackground() {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Get scroll position for parallax effect
-      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-      
-      starsRef.current.forEach(star => {
-        // Enhanced vertical parallax movement
-        const adjustedY = star.y - scrollY * star.parallaxFactor * 0.4;
-        const adjustedX = star.x;
+      // Only draw stars in dark mode
+      if (isDark) {
+        // Get scroll position for parallax effect
+        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
         
-        // Twinkling effect
-        star.opacity += Math.sin(Date.now() * star.twinkleSpeed) * 0.01;
-        star.opacity = Math.max(0.1, Math.min(1, star.opacity));
-        
-        // Draw star with theme colors
-        ctx.save();
-        ctx.globalAlpha = star.opacity;
-        
-        // Use theme star color with subtle variations
-        ctx.fillStyle = colors.star;
-        
-        ctx.beginPath();
-        ctx.arc(adjustedX, adjustedY, star.size, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-      });
+        starsRef.current.forEach(star => {
+          // Enhanced vertical parallax movement
+          const adjustedY = star.y - scrollY * star.parallaxFactor * 0.4;
+          const adjustedX = star.x;
+          
+          // Twinkling effect
+          star.opacity += Math.sin(Date.now() * star.twinkleSpeed) * 0.01;
+          star.opacity = Math.max(0.1, Math.min(1, star.opacity));
+          
+          // Draw star with theme colors
+          ctx.save();
+          ctx.globalAlpha = star.opacity;
+          
+          // Use theme star color with subtle variations
+          ctx.fillStyle = colors.star;
+          
+          ctx.beginPath();
+          ctx.arc(adjustedX, adjustedY, star.size, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        });
+      }
       
       animationRef.current = requestAnimationFrame(animate);
     };
@@ -78,7 +81,7 @@ export default function StarryBackground() {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [colors]);
+  }, [colors, isDark]);
 
   return (
     <canvas

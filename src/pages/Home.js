@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import HighlightedText from '../components/ui/HighlightedText';
+import GitHubCalendar from 'react-github-calendar';
 import headshot from '../assets/img/headshot.JPG';
 
 export default function Home() {
-  const { colors } = useTheme();
+  const { colors, isDark } = useTheme();
   const [audioPlaying, setAudioPlaying] = useState(false);
 
   const playPronunciation = () => {
@@ -95,7 +96,7 @@ export default function Home() {
           <p className="text-sm leading-relaxed font-sans" style={{ color: colors.textMuted }}>
             i go by{' '}
             <HighlightedText bold>john</HighlightedText>
-            , a senior at the University of Notre Dame, double majoring in cs & applied math. broadly, i work on <strong>trustworthy NLP</strong>, focused on interpretability of language models. i research closely with {' '}
+            , a senior at the University of Notre Dame, double majoring in cs & applied math. broadly, i work on <strong>trustworthy AI</strong>, focused on interpretability of language and multimodal models. i research closely with {' '}
             <HighlightedText href="https://www.nunomoniz.co/">nuno moniz</HighlightedText>
             {' '}and{' '}
             <HighlightedText href="http://www.meng-jiang.com/">meng jiang</HighlightedText>
@@ -142,7 +143,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section - academic style with images */}
+      {/* GitHub Contributions Section */}
+      <section>
+        <h2 className="text-lg font-medium mb-4 font-space" style={{ color: colors.text }}>
+          Github Activity
+        </h2>
+        <div className="w-full">
+          <GitHubCalendar 
+            username="johnkimdw"
+            blockRadius={20}
+            // theme={{
+            //   light: ['#f1f5f9', '#dbeafe', '#93c5fd', '#3b82f6', '#1e40af'],
+            //   dark: ['#0f172a', '#1e3a8a', '#3b82f6', '#60a5fa', '#93c5fd']
+            // }}
+            style={{
+              color: colors.textMuted
+            }}
+          />
+        </div>
+      </section>
+
+
+      {/* Projects Section */}
       <section>
         <h2 className="text-lg font-medium mb-4 font-space" style={{ color: colors.text }}>
           Projects
