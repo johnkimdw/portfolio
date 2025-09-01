@@ -95,7 +95,7 @@ export default function Home() {
           <p className="text-sm leading-relaxed font-sans" style={{ color: colors.textMuted }}>
             i go by{' '}
             <HighlightedText bold>john</HighlightedText>
-            , a senior at the University of Notre Dame, double majoring in cs & applied math. broadly, i work on <strong>trustworthy NLP</strong>, focused on interpretability of language models. i research closely with {' '}
+            , a senior at the University of Notre Dame, double majoring in cs & applied math. broadly, i work on <strong>trustworthy AI</strong>, focused on interpretability of language and multimodal models. i research closely with {' '}
             <HighlightedText href="https://www.nunomoniz.co/">nuno moniz</HighlightedText>
             {' '}and{' '}
             <HighlightedText href="http://www.meng-jiang.com/">meng jiang</HighlightedText>
