@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import HighlightedText from '../components/ui/HighlightedText';
+import GitHubCalendar from 'react-github-calendar';
 import headshot from '../assets/img/headshot.JPG';
 
 export default function Home() {
-  const { colors } = useTheme();
+  const { colors, isDark } = useTheme();
   const [audioPlaying, setAudioPlaying] = useState(false);
 
   const playPronunciation = () => {
@@ -142,7 +143,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section - academic style with images */}
+      {/* GitHub Contributions Section */}
+      <section>
+        <h2 className="text-lg font-medium mb-4 font-space" style={{ color: colors.text }}>
+          Github Activity
+        </h2>
+        <div className="w-full">
+          <GitHubCalendar 
+            username="johnkimdw"
+            theme={{
+              light: [colors.bg, '#e2e8f0', '#cbd5e1', colors.link, colors.linkHover],
+              dark: [colors.bg, '#374151', '#6b7280', colors.link, colors.linkHover]
+            }}
+            colorScheme={isDark ? 'dark' : 'light'}
+            style={{
+              color: colors.textMuted
+            }}
+          />
+        </div>
+      </section>
+
+
+      {/* Projects Section */}
       <section>
         <h2 className="text-lg font-medium mb-4 font-space" style={{ color: colors.text }}>
           Projects
