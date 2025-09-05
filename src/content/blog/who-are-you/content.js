@@ -34,7 +34,6 @@ I think that's why I gravitate to academia, because it's a lot of reading, but y
 I like cooking, dancing (i'm bad), and exploring. I think there is a child-like fascination that still remains in me when uncovering new things, like hiking to find waterfalls, or watching cave crawling videos (i'd never do that).{{ref:2}}
 
 I also like watching kdramas, anime, and movies. My favorite kdrama is Pinocchio (or strong girl bongsoon, or when life gives you tangerines, ~~there's too many~~), favorite anime is 86 (or hxh, or mob psycho!), and movie is maybe Train to Busan. My favorite game is probably Minecraft. I love horror movies and games too.
-I also like watching kdramas, anime, and movies. My favorite kdrama is Pinocchio (or strong girl bongsoon, or when life gives you tangerines, ~~there's too many~~), favorite anime is 86 (or hxh, or mob psycho!), and movie is maybe Train to Busan. My favorite game is probably Minecraft. I love horror movies and games too.
 
 ## Where are you from?
 
