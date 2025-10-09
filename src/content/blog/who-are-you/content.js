@@ -3,7 +3,7 @@ import { waterfall, headshotSnow, wetDog, pianoChina } from './images';
 export const metadata = {
   slug: "who-are-you",
   title: "who are you",
-  date: "July 27, 2025",
+  date: "july 27, 2025",
   time_date: "2025-07-27",
   excerpt: "i talk abt me.",
   published: true
