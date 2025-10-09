@@ -3,7 +3,7 @@
 export const metadata = {
   slug: "me-and-research",
   title: "me and research",
-  date: "October 9, 2025",
+  date: "oct 9, 2025",
   time_date: "2025-10-09",
   excerpt: "why i want to do research, college = time to find what you like + don't like, my thoughts on AI now, what I think I want to research on.",
   published: true
