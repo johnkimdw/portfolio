@@ -1,0 +1,20 @@
+[
+    {
+    "id": 1,
+    "content": "Notre Dame believes in a holistic education, which is why we are required to take theology, philosophy, science, and other courses. Additionally, the earliest CS class you could take is in freshman spring, which you had to test in for (I did) This means CS majors often don't take AI/ML courses until junior or senior year unlike other universities where students can dive into specialized topics earlier.",
+    "position": "ref:1",
+    "clickable": false
+  },
+  {
+    "id": 2,
+    "content": "Heidegger calls this enframing, a mode of revealing where everything becomes \"standing-reserve\", resources waiting to be extracted and optimized. Ancient technology, like pottery or windmills, worked with nature, revealing what it offered. Modern technology forces nature to be a resource, like hydroelectric dams, oil rigs, data centers. With AI, we are increasingly applying the same logic to humans itself. Our preferences, judgements, and creativity are become standing-reserve for the next training run.",
+    "position": "ref:2",
+    "clickable": false
+  },
+  {
+    "id": 3,
+    "content": "Inspirations from DSPy and IBM's view on generative computing.",
+    "position": "ref:3",
+    "clickable": false
+  }
+]
