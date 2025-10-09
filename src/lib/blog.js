@@ -1,11 +1,18 @@
 // Import the content and sidecomments
+import { metadata as meAndResearchMetadata, content as meAndResearchContent } from '../content/blog/me-and-research/content';
 import { metadata as whoAreYouMetadata, content as whoAreYouContent } from '../content/blog/who-are-you/content';
 import { metadata as awsInternshipMetadata, content as awsInternshipContent } from '../content/blog/aws-internship-2025/content';
+import meAndResearchSideComments from '../content/sidecomments/me-and-research.json';
 import whoAreYouSideComments from '../content/sidecomments/who-are-you.json';
 import awsInternshipSideComments from '../content/sidecomments/aws-internship-2025.json';
 
 // Static data structure with imported content
 const posts = [
+  {
+    ...meAndResearchMetadata,
+    content: meAndResearchContent,
+    sideComments: meAndResearchSideComments
+  },
   {
     ...whoAreYouMetadata,
     content: whoAreYouContent,
