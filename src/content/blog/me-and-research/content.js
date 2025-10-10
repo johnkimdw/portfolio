@@ -27,7 +27,7 @@ That summer was when I decided to switch my major from chemical engineering to c
 
 Although that sounds fancy, in truth, this project was a lot of exploring and looking stuff up, fixing errors, and self-doubting myself. I was a sophomore but had not taken a single AI course at this point and wouldn't until junior year{{ref:1}}, but I learned a lot about taking an idea to execution end-to-end, documenting your work, and how to write a research paper. This cumulated into a [1st-author paper](https://link.springer.com/chapter/10.1007/978-3-031-91398-3_33) accepted at [IDA 2025](https://ida2025.org/). At this time, it was satisfying [solving hard, important problems](https://www.benkuhn.net/hard/). 
 
-Since then, I have worked on more projects with multimodal contextual safety (looking to submit to ACL 2026), machine unlearning which is how we can strip dangerous information from a model without fully retraining it (poster presentation at RISE AI conference), and research tools for fact-checking. I have grown a lot since then, and I feel more passionate about working on these problems compared to the rest of what I've done. 
+Since then, I have worked on more projects with multimodal contextual safety (looking to submit to ACL 2026), machine unlearning which is how we can strip dangerous information from a model without fully retraining it (poster presentation at RISE AI conference), research tools for fact-checking (tbd where), and contributed to DSPy Arbor. I have grown a lot since then, and I feel more passionate about working on these problems compared to the rest of what I've done. 
 
 
 ## What about a career that isn't research?
