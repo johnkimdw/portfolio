@@ -11,10 +11,16 @@
     "position": "ref:2",
     "clickable": false
   },
-  {
+    {
     "id": 3,
-    "content": "Inspirations from DSPy and IBM's view on generative computing.",
+    "content": "Omar Khattab says it better here on how to do good research and leave your mark.",
     "position": "ref:3",
+    "clickable": false
+  },
+  {
+    "id": 34,
+    "content": "Inspirations from DSPy and IBM's view on generative computing.",
+    "position": "ref:4",
     "clickable": false
   }
 ]
