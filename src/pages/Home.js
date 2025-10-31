@@ -96,19 +96,17 @@ export default function Home() {
           <p className="text-sm leading-relaxed font-sans" style={{ color: colors.textMuted }}>
             i go by{' '}
             <HighlightedText bold>john</HighlightedText>
-            , a senior at the University of Notre Dame, double majoring in cs & applied math. broadly, i work on <strong>trustworthy AI</strong> and building <strong>reliable AI systems</strong>. More specifically:
+            , a senior at the University of Notre Dame, double majoring in cs & applied math. broadly, i work on <strong>trustworthy AI</strong> and building <strong>reliable AI systems</strong>, advised by{' '}
+            <HighlightedText href="https://www.nunomoniz.co/">nuno moniz</HighlightedText>
+            {' '}and{' '}
+            <HighlightedText href="http://www.meng-jiang.com/">meng jiang</HighlightedText>. my interests more specifically:
           </p>
           <ul className="text-sm leading-relaxed font-sans list-disc list-inside" style={{ color: colors.textMuted }}>
-            <li>better evaluations to identify failure modes before they reach end-users (benchmarking)</li>
+            <li>better evaluations to identify failure modes (benchmarking)</li>
             <li>understand why these failure modes occur (interpretability)</li>
             <li>and fix/align models to prevent them (steering)</li>
           </ul>
-          <p className="text-sm leading-relaxed font-sans" style={{ color: colors.textMuted }}>
-            currently, i'm working on multimodal llm contextual safety though! i research closely with{' '}
-            <HighlightedText href="https://www.nunomoniz.co/">nuno moniz</HighlightedText>
-            {' '}and{' '}
-            <HighlightedText href="http://www.meng-jiang.com/">meng jiang</HighlightedText>.
-          </p>
+      
           <p className="text-sm leading-relaxed font-sans" style={{ color: colors.textMuted }}>
             previously, i was an ai/ml sde intern at <strong>AWS</strong> SageMaker Unified Studio where i built, deployed, and scaled AI agents. i worked end-to-end, including infrastructure (IaC), to agentic workflows with memory/hitl, and MCP/A2A integrations.
           </p>
