@@ -102,7 +102,7 @@ export default function Home() {
             <HighlightedText href="http://www.meng-jiang.com/">meng jiang</HighlightedText>. my interests more specifically:
           </p>
           <ul className="text-sm leading-relaxed font-sans list-disc list-inside" style={{ color: colors.textMuted }}>
-            <li>better evaluations to identify failure modes (benchmarking)</li>
+            <li>build evaluations to identify failure modes (benchmarking)</li>
             <li>understand why these failure modes occur (interpretability)</li>
             <li>and fix/align models to prevent them (steering)</li>
           </ul>
