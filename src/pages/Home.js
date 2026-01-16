@@ -125,6 +125,48 @@ export default function Home() {
         <div className="space-y-4">
           <div className="space-y-1">
             <a 
+              href="https://arxiv.org/pdf/2601.06757" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm leading-relaxed transition-colors duration-200 hover:underline font-sans"
+              style={{ color: colors.link }}
+              onMouseEnter={(e) => e.target.style.color = colors.linkHover}
+              onMouseLeave={(e) => e.target.style.color = colors.link}
+            >
+              MTMCS-Bench: Evaluating Contextual Safety of Multimodal Large Language Models in Multi-Turn Dialogues
+            </a>
+            <p className="text-xs font-sans" style={{ color: colors.textMuted }}>
+              ACL, 2026 (in submission)
+
+            </p>
+
+            <p className="text-xs font-sans" style={{ color: colors.textMuted }}>
+              Zheyuan Liu*, <strong>Dongwhi Kim*</strong>, Yixin Wan, Xiangchi Yuan, Zhaoxuan Tan, Fengran Mo, Meng Jiang 
+            </p>
+          </div>
+          <div className="space-y-1">
+            <a 
+              href="https://arxiv.org/pdf/2512.11661" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm leading-relaxed transition-colors duration-200 hover:underline font-sans"
+              style={{ color: colors.link }}
+              onMouseEnter={(e) => e.target.style.color = colors.linkHover}
+              onMouseLeave={(e) => e.target.style.color = colors.link}
+            >
+              From Verification Burden to Trusted Collaboration: Design Goals for LLM-Assisted Literature Reviews
+            </a>
+            <p className="text-xs font-sans" style={{ color: colors.textMuted }}>
+              AAAI Workshop on AI for Scientific Research, 2026
+
+            </p>
+
+            <p className="text-xs font-sans" style={{ color: colors.textMuted }}>
+              Brenda Nogueira, Werner Geyer, Andrew Anderson, Toby Jia-Jun Li, <strong>Dongwhi Kim</strong>, Nuno Moniz, Nitesh V Chawla
+            </p>
+          </div>
+          <div className="space-y-1">
+            <a 
               href="https://link.springer.com/chapter/10.1007/978-3-031-91398-3_33" 
               target="_blank" 
               rel="noopener noreferrer"

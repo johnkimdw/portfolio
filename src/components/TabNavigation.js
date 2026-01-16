@@ -10,7 +10,8 @@ export default function TabNavigation() {
   const tabs = [
     { name: 'home', type: 'route', path: '/' },
     { name: 'blog', type: 'route', path: '/blog' },
-    { name: 'cooking', type: 'route', path: '/cooking' }
+    { name: 'cooking', type: 'route', path: '/cooking' },
+    { name: 'dance', type: 'route', path: '/dance' }
   ];
 
   return (
