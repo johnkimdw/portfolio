@@ -17,9 +17,9 @@ export default function TabNavigation() {
 
   return (
     <nav className="relative z-10 pt-8 pb-4">
-      <div className="max-w-2xl mx-auto px-6 relative">
+      <div className="max-w-2xl mx-auto px-6">
         {/* Desktop Navigation */}
-        <div className="hidden sm:flex justify-center">
+        <div className="hidden sm:flex justify-center items-center">
           <div className="flex items-center gap-4 text-sm font-sans">
             {tabs.map((tab, index) => (
               <React.Fragment key={tab.name}>
@@ -47,10 +47,18 @@ export default function TabNavigation() {
               </React.Fragment>
             ))}
           </div>
+          {/* Desktop Theme Toggle */}
+          <div className="absolute right-6">
+            <ThemeToggle />
+          </div>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="flex sm:hidden justify-center">
+        {/* Mobile Header Row */}
+        <div className="flex sm:hidden justify-between items-center">
+          {/* Spacer for balance */}
+          <div className="w-8"></div>
+
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="px-3 py-1 transition-all duration-300 flex items-center gap-2 text-sm font-sans"
@@ -90,12 +98,15 @@ export default function TabNavigation() {
               ✦
             </span>
           </button>
+
+          {/* Mobile Theme Toggle */}
+          <ThemeToggle />
         </div>
 
         {/* Mobile Dropdown Menu */}
         <div
           className={`sm:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'
+            isMenuOpen ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'
           }`}
         >
           <div className="grid grid-cols-2 gap-2 text-sm font-sans py-2 max-w-[200px] mx-auto">
@@ -114,11 +125,6 @@ export default function TabNavigation() {
               </Link>
             ))}
           </div>
-        </div>
-
-        {/* Theme Toggle */}
-        <div className="absolute right-2 sm:right-0 top-0 flex items-center h-full">
-          <ThemeToggle />
         </div>
       </div>
     </nav>
