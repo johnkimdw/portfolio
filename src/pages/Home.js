@@ -110,6 +110,8 @@ export default function Home() {
           <p className="text-sm leading-relaxed font-sans" style={{ color: colors.textMuted }}>
             previously, i was an ai/ml sde intern at <strong>AWS</strong> SageMaker Unified Studio where i built, deployed, and scaled AI agents. i worked end-to-end, including infrastructure (IaC), to agentic workflows with memory/hitl, and MCP/A2A integrations.
           </p>
+          {/* <br></br> */}
+
         {/* <p className="text-base leading-relaxed font-sans" style={{ color: colors.textMuted }}>
             In my free time, I like cooking and dancing. Feel free to reach out to discuss 
             anything related to tech, food, and shows!
@@ -119,10 +121,10 @@ export default function Home() {
 
       {/* Research Section */}
       <section>
-        <h2 className="text-lg font-medium 4 font-space" style={{ color: colors.text }}>
+        <h2 className="text-lg font-medium mb-4 mt-10 font-space" style={{ color: colors.text }}>
           Selected works
         </h2>
-        <div className="space-y-4">
+        <div className="space-y-6">
           <div className="space-y-1">
             <a 
               href="https://arxiv.org/pdf/2601.06757" 
@@ -191,7 +193,7 @@ export default function Home() {
 
       {/* GitHub Contributions Section */}
       <section>
-        <h2 className="text-lg font-medium mb-4 font-space" style={{ color: colors.text }}>
+        <h2 className="text-lg font-medium mb-4 mt-10 font-space" style={{ color: colors.text }}>
           Github Activity
         </h2>
         <div className="w-full">
@@ -212,7 +214,7 @@ export default function Home() {
 
       {/* Projects Section */}
       <section>
-        <h2 className="text-lg font-medium mb-4 font-space" style={{ color: colors.text }}>
+        <h2 className="text-lg font-medium mb-4 mt-10 font-space" style={{ color: colors.text }}>
           Projects
         </h2>
         <div className="space-y-6">

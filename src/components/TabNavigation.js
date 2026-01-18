@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
 import ThemeToggle from './ThemeToggle';
@@ -6,6 +6,7 @@ import ThemeToggle from './ThemeToggle';
 export default function TabNavigation() {
   const location = useLocation();
   const { colors } = useTheme();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const tabs = [
     { name: 'home', type: 'route', path: '/' },
@@ -17,14 +18,15 @@ export default function TabNavigation() {
   return (
     <nav className="relative z-10 pt-8 pb-4">
       <div className="max-w-2xl mx-auto px-6 relative">
-        <div className="flex justify-center">
+        {/* Desktop Navigation */}
+        <div className="hidden sm:flex justify-center">
           <div className="flex items-center gap-4 text-sm font-sans">
             {tabs.map((tab, index) => (
               <React.Fragment key={tab.name}>
                 <Link
                   to={tab.path}
                   className="transition-all duration-200 px-2 py-1 relative"
-                  style={{ 
+                  style={{
                     color: location.pathname === tab.path ? colors.text : colors.textMuted,
                     textDecoration: location.pathname === tab.path ? 'underline' : 'none'
                   }}
@@ -46,6 +48,75 @@ export default function TabNavigation() {
             ))}
           </div>
         </div>
+
+        {/* Mobile Menu Button */}
+        <div className="flex sm:hidden justify-center">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="px-3 py-1 transition-all duration-300 flex items-center gap-2 text-sm font-sans"
+            style={{ color: colors.text }}
+            aria-label="Toggle menu"
+          >
+            <span
+              className="transition-transform duration-300"
+              style={{
+                display: 'inline-block',
+                transform: isMenuOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                color: colors.star
+              }}
+            >
+              ✦
+            </span>
+            <span
+              className="text-base transition-transform duration-300 w-4 text-center"
+              style={{
+                color: colors.textMuted,
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                transform: isMenuOpen ? 'rotate(90deg)' : 'rotate(0deg)'
+              }}
+            >
+              {isMenuOpen ? '×' : '≡'}
+            </span>
+            <span
+              className="transition-transform duration-300"
+              style={{
+                display: 'inline-block',
+                transform: isMenuOpen ? 'rotate(-180deg)' : 'rotate(0deg)',
+                color: colors.star
+              }}
+            >
+              ✦
+            </span>
+          </button>
+        </div>
+
+        {/* Mobile Dropdown Menu */}
+        <div
+          className={`sm:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="grid grid-cols-2 gap-2 text-sm font-sans py-2 max-w-[200px] mx-auto">
+            {tabs.map((tab) => (
+              <Link
+                key={tab.name}
+                to={tab.path}
+                onClick={() => setIsMenuOpen(false)}
+                className="transition-all duration-200 px-4 py-2 text-center"
+                style={{
+                  color: location.pathname === tab.path ? colors.text : colors.textMuted,
+                  textDecoration: location.pathname === tab.path ? 'underline' : 'none'
+                }}
+              >
+                {tab.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Theme Toggle */}
         <div className="absolute right-2 sm:right-0 top-0 flex items-center h-full">
           <ThemeToggle />
         </div>
