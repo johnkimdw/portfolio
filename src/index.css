@@ -11,9 +11,60 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Background color for html element to fill scrollbar gutter */
+html {
+  background-color: #ffffff;
+}
+
+html.dark {
+  background-color: #000000;
+}
+
 /* Prevent layout shift when scrollbar appears/disappears */
 html {
   scrollbar-gutter: stable;
+}
+
+/* Custom scrollbar styling for light mode */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #93c5fd;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #60a5fa;
+}
+
+/* Custom scrollbar styling for dark mode */
+.dark ::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #1e40af;
+  border-radius: 5px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Firefox scrollbar styling */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #93c5fd #ffffff;
+}
+
+html.dark {
+  scrollbar-color: #1e40af #000000;
 }
 
 body {

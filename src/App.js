@@ -7,6 +7,7 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Cooking from './pages/Cooking';
 import Dance from './pages/Dance';
+import Art from './pages/Art';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/cooking" element={<Cooking />} />
             <Route path="/dance" element={<Dance />} />
+            <Route path="/art" element={<Art />} />
           </Routes>
         </Layout>
       </Router>
