@@ -3,9 +3,9 @@
 // `npm start` and `npm run build`; run it by hand with `npm run photos`.
 //
 // To add a dish: drop a photo into photos/cooking/ (.jpg .jpeg .png .webp
-// .avif). iPhone .heic files can't be decoded here; export them as JPG first. Optionally give it a title/description in
-// photos/cooking/captions.json; without one, the title comes from the
-// filename (my_new-dish.jpg -> "My New Dish") and it shows first.
+// .avif; iPhone .heic files can't be decoded here, so export them as JPG).
+// Optionally give it a title/description in photos/cooking/captions.json;
+// without one, the title comes from the filename and it shows first.
 //
 // Output (generated, git-ignored):
 //   public/photos/<collection>/<name>-<width>.webp
