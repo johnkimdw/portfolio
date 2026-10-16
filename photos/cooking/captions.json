@@ -1,0 +1,46 @@
+{
+  "chilli_pork_noodles.jpg": {
+    "title": "Chili Pork Noodles",
+    "description": "Spicy noodles with ground pork, garlic, ginger, and scallions"
+  },
+  "jehyukbokkeum.jpg": {
+    "title": "제육볶음",
+    "description": "Korean spicy stir-fried pork with gochujang and vegetables"
+  },
+  "mien_ga.jpg": {
+    "title": "Mien Ga",
+    "description": "Vietnamese chicken noodle soup with herbs and potato"
+  },
+  "mixed_mapotofu.jpg": {
+    "title": "Mixed Mapo Tofu",
+    "description": "Sichuan-style silky tofu in spicy fermented bean sauce"
+  },
+  "pepper_lunch.jpg": {
+    "title": "Pepper Lunch",
+    "description": "Steak, corn, onions, and rice with black pepper sauce"
+  },
+  "prosciutto_mozz_balls.jpg": {
+    "title": "Prosciutto Mozzarella Balls",
+    "description": "Little appetizer"
+  },
+  "ribeye_bibimyeon_onions.jpg": {
+    "title": "Ribeye Steak + Bibimyeon",
+    "description": "Korean mixed noodles with seared ribeye and caramelized onions"
+  },
+  "scallion_chicken_sear.jpg": {
+    "title": "Crispy Chicken with Garlic Ginger Scallion Oil",
+    "description": "Pan-seared chicken thighs with garlic ginger scallion oil"
+  },
+  "shrimp_ricepaper_pancake.jpg": {
+    "title": "Shrimp Rice Paper Pancake",
+    "description": "Vietnamese-style crispy rice paper with shrimp and scallions"
+  },
+  "thai_red_chicken_curry.jpg": {
+    "title": "Thai Red Chicken Curry",
+    "description": "Thai red coconut curry with chicken"
+  },
+  "zuchinni_korean_jeon.jpg": {
+    "title": "Zucchini Korean Jeon",
+    "description": "Korean jeon with zuchinni and egg"
+  }
+}

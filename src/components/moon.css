@@ -1,0 +1,12 @@
+/* Moon easter egg */
+.moon-playing {
+  animation: moon-bob 4s ease-in-out infinite;
+  text-shadow: 0 0 6px rgba(226, 232, 240, 0.5);
+}
+@keyframes moon-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(2deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .moon-playing { animation: none; }
+}

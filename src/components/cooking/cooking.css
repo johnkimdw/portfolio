@@ -1,0 +1,14 @@
+.cooking-print {
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.cooking-print:hover, .cooking-print:focus-visible {
+  transform: rotate(0deg) translateY(-3px) scale(1.02);
+  z-index: 1;
+  position: relative;
+}
+.cooking-fade { animation: cooking-fade 0.2s ease-out; }
+@keyframes cooking-fade { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .cooking-print, .cooking-fade { transition: none; animation: none; }
+}

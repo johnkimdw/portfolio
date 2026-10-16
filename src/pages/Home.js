@@ -3,6 +3,7 @@ import { useTheme } from '../contexts/ThemeContext';
 import HighlightedText from '../components/ui/HighlightedText';
 import GitHubCalendar from 'react-github-calendar';
 import headshot from '../assets/img/headshot.JPG';
+import Moon from '../components/Moon';
 
 export default function Home() {
   const { colors, isDark } = useTheme();
@@ -20,6 +21,9 @@ export default function Home() {
   };
 
   return (
+    <>
+    {/* Kept outside the space-y container so toggling it doesn't shift the content */}
+    {isDark && <Moon />}
     <div className="space-y-4 py-8">
       {/* Header Section */}
       <section className="flex items-center space-x-6 pb-8">
@@ -228,5 +232,6 @@ export default function Home() {
 
 
     </div>
+    </>
   );
 }
