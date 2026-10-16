@@ -18,6 +18,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "photos": "node scripts/process-photos.js",
+    "prestart": "npm run photos",
+    "prebuild": "npm run photos",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,6 +47,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/react": "^14.3.0",
+    "sharp": "^0.34.5",
     "tailwindcss": "^3.4.0"
   }
 }

@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
-import cookingData from '../data/cookingData';
+import { useDesign } from '../contexts/DesignContext';
+import cookingData from '../data/cooking';
+import { COOKING_LAYOUTS } from '../components/cooking/layouts';
+import Lightbox from '../components/cooking/Lightbox';
+import LayoutSwitcher from '../components/LayoutSwitcher';
+import '../components/cooking/cooking.css';
 
 export default function Cooking() {
   const { colors } = useTheme();
+  const { cooking, setCooking } = useDesign();
+  const [open, setOpen] = useState(null);
+  const Layout = (COOKING_LAYOUTS[cooking] || COOKING_LAYOUTS.grid).component;
 
   return (
     <div className="space-y-8 py-8">
@@ -17,57 +25,19 @@ export default function Cooking() {
         </p>
       </section>
 
-      {/* Cooking Grid */}
-      <section>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {cookingData.map((dish) => (
-            <div
-              key={dish.id}
-              className="group cursor-pointer"
-            >
-              {/* Image Container */}
-              <div 
-                className="aspect-square rounded-lg overflow-hidden mb-3 transition-all duration-300 group-hover:scale-105"
-                style={{ 
-                  border: `1px solid ${colors.border}`
-                }}
-              >
-                <img 
-                  src={dish.image} 
-                  alt={dish.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+      <LayoutSwitcher options={COOKING_LAYOUTS} value={cooking} onChange={setCooking} />
 
-              {/* Caption */}
-              <div className="space-y-1">
-                <h3 
-                  className="text-base font-medium font-sans transition-colors duration-200"
-                  style={{ color: colors.text }}
-                >
-                  {dish.title}
-                </h3>
-                <p 
-                  className="text-sm font-sans"
-                  style={{ color: colors.textMuted }}
-                >
-                  {dish.description}
-                </p>
-                <p 
-                  className="text-sm font-sans"
-                  style={{ color: colors.textMuted, opacity: 0.7 }}
-                >
-                  {dish.date}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+      <section>
+        <Layout dishes={cookingData} onOpen={setOpen} />
       </section>
+
+      {open !== null && (
+        <Lightbox dishes={cookingData} index={open} onChange={setOpen} onClose={() => setOpen(null)} />
+      )}
 
       {/* Footer note */}
       <section className="text-center pt-8">
-        <p 
+        <p
           className="text-sm font-sans italic"
           style={{ color: colors.textMuted, opacity: 0.6 }}
         >

@@ -1,91 +1,86 @@
 import React, { useEffect, useRef } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
+import { useDesign } from '../contexts/DesignContext';
+import { SKY_VARIANTS } from './sky/skyVariants';
+
+// Dark-mode ASCII sky. Runs the frame loop and eased scroll; the look itself
+// comes from the active variant in sky/skyVariants.js.
+
+const FPS = 15;
 
 export default function StarryBackground() {
   const { colors, isDark } = useTheme();
+  const { sky } = useDesign();
   const canvasRef = useRef(null);
-  const animationRef = useRef(null);
-  const starsRef = useRef([]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-    
-    // Set canvas size
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-    
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Create stars - more subtle for academic feel
-    const createStars = (count = 80) => {
-      const stars = [];
-      for (let i = 0; i < count; i++) {
-        stars.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          size: Math.random() * 1.5 + 0.3,
-          opacity: Math.random() * 0.6 + 0.1,
-          twinkleSpeed: Math.random() * 0.00001 + 0.005,
-          parallaxFactor: Math.random() * 5.3 + 0.1
-        });
-      }
-      return stars;
-    };
-
-    starsRef.current = createStars();
-
-    // Animation loop
-    const animate = () => {
+    const variant = SKY_VARIANTS[sky] || Object.values(SKY_VARIANTS)[0];
+    if (!isDark) {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      // Only draw stars in dark mode
-      if (isDark) {
-        // Get scroll position for parallax effect
-        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-        
-        starsRef.current.forEach(star => {
-          // Enhanced vertical parallax movement
-          const adjustedY = star.y - scrollY * star.parallaxFactor * 0.4;
-          const adjustedX = star.x;
-          
-          // Twinkling effect
-          star.opacity += Math.sin(Date.now() * star.twinkleSpeed) * 0.01;
-          star.opacity = Math.max(0.1, Math.min(1, star.opacity));
-          
-          // Draw star with theme colors
-          ctx.save();
-          ctx.globalAlpha = star.opacity;
-          
-          // Use theme star color with subtle variations
-          ctx.fillStyle = colors.star;
-          
-          ctx.beginPath();
-          ctx.arc(adjustedX, adjustedY, star.size, 0, Math.PI * 2);
-          ctx.fill();
-          ctx.restore();
-        });
-      }
-      
-      animationRef.current = requestAnimationFrame(animate);
+      return;
+    }
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let cols = 0, rows = 0, state = null;
+    let raf, last = 0;
+    let smoothScroll = window.scrollY || 0; // eased scroll for a floaty feel
+
+    const resize = () => {
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      cols = Math.ceil(window.innerWidth / variant.cell);
+      rows = Math.ceil(window.innerHeight / variant.cell);
+      state = variant.setup(cols, rows);
     };
 
-    animate();
+    const draw = (t) => {
+      smoothScroll += ((window.scrollY || 0) - smoothScroll) * (reduceMotion ? 1 : 0.08);
+      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+      ctx.font = `${variant.cell - 2}px ui-monospace, SFMono-Regular, Menlo, monospace`;
+      ctx.textBaseline = 'top';
+      variant.draw(ctx, state, {
+        time: t / 1000,
+        scrollRows: smoothScroll / variant.cell,
+        cols,
+        rows,
+        reduceMotion,
+      });
+    };
+
+    const loop = (t) => {
+      raf = requestAnimationFrame(loop);
+      if (t - last < 1000 / FPS) return;
+      last = t;
+      draw(t);
+    };
+
+    const onResize = () => { resize(); draw(performance.now()); };
+    const onScroll = () => draw(performance.now());
+
+    resize();
+    window.addEventListener('resize', onResize);
+    if (reduceMotion) {
+      draw(0);
+      window.addEventListener('scroll', onScroll, { passive: true });
+    } else {
+      raf = requestAnimationFrame(loop);
+    }
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
+      cancelAnimationFrame(raf);
+      window.removeEventListener('resize', onResize);
+      window.removeEventListener('scroll', onScroll);
     };
-  }, [colors, isDark]);
+  }, [isDark, sky]);
 
   return (
     <canvas
       ref={canvasRef}
+      aria-hidden="true"
       className="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
       style={{ backgroundColor: colors.bg }}
     />
